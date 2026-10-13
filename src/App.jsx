@@ -1,4 +1,6 @@
 import { useState } from "react";
+import Summary from "./components/Summary";
+import Waitlist from "./components/Waitlist";
 
 function App() {
   const [seats, setSeats] = useState(1);
@@ -29,13 +31,7 @@ function App() {
       </nav>
 
       <div className="flex items-end justify-between bg-[#000000] px-20 py-12 text-[#EEEEEE]">
-        <header>
-          <h2 className="text-6xl font-bold">Build your plan</h2>
-          <p className="mt-4 text-3xl text-[#CB2957]">
-            Seats: {seats} | Months: {months}
-          </p>
-          <p className="mt-2 text-xl">Bryll Josh Parba</p>
-        </header>
+        <Summary seats={seats} months={months} />
 
         <div className="flex gap-4">
           <button
@@ -100,6 +96,8 @@ function App() {
           </p>
         </div>
       </main>
+
+      <Waitlist />
 
       <footer className="mt-auto bg-[#000000] px-20 py-6 text-center text-xl text-[#EEEEEE]">
         <p>All plans are billed per seat, every month.</p>
