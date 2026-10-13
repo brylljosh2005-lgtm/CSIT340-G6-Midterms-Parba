@@ -1,42 +1,37 @@
-import { useState } from "react";
+jsxs("div" , {
+    className: 
+    "mx-20 mt-8 flex items-center justify-between rounded-x1 border-2 broder-[#000000] bg-[#EEEEEE] p-6" ,
+    children: [
+        jsxs("div" , {
+          children: [
+                jsxs("h3", {
+                    className: "text-2x1 font-bold",
+                    children: "Cloudline Enterprise is coming soon.",
+                }),
+            jsxs("p" ,{
+                 className: "mt-1 text-x1",
+                 children: [teams, " teams joined the waitlist."],
+            }),
+         ]
 
-function Waitlist() {
-  const [teams, setTeams] = useState(0);
-
-  function handleJoin() {
-    setTeams((currentTeams) => currentTeams + 1);
-  }
-
-  function handleClear() {
-    setTeams(0);
-  }
-
-  return (
-    <section className="mx-20 mt-8 flex items-center justify-between rounded-xl border-2 border-[#000000] bg-[#EEEEEE] p-6">
-      <div>
-        <h3 className="text-2xl font-bold">
-          Cloudline Enterprise is coming soon.
-        </h3>
-        <p className="mt-1 text-xl">{teams} teams joined the waitlist.</p>
-      </div>
-      <div className="flex gap-4">
-        <button
-          className="cursor-pointer rounded-lg bg-[#CB2957] px-8 py-3 text-xl font-bold text-[#EEEEEE]"
-          onClick={handleJoin}
-          type="button"
-        >
-          Join
-        </button>
-        <button
-          className="cursor-pointer rounded-lg border-2 border-[#000000] px-8 py-3 text-xl font-bold"
-          onClick={handleClear}
-          type="button"
-        >
-          Clear
-        </button>
-      </div>
-    </section>
-  );
-}
-
-export default Waitlist;
+        }),
+        jsxs("div", {
+            className: "flex gap-4",
+            children: [
+                jsx("button" , {
+                    className:
+                    "cursor-pointer rounded-lg bg-[#CB2957] px-8 py-3 text-xl font-bold text-[#EEEEEE]",
+                    onClick: handleJoin,
+                    children: "Join",
+                    
+                }),
+                jsx("button" , {
+                    className:
+                    "cursor-pointer rounded-lg border-2 border-[#000000] px-8 py-3 text-xl text-xl font-bold",
+                    onClick: handleClear,
+                    children: "Clear",
+                }),
+            ],
+        }),
+    ],
+}),
