@@ -35,3 +35,4 @@ jsxs("div" , {
         }),
     ],
 }),
+export default Waitlist; 
